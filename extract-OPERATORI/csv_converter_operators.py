@@ -62,6 +62,7 @@ field_ricette = []
 field_attrazioni = []
 field_itinerari = []
 field_bike = []
+field_created = []
 
 
 for a in assets:
@@ -69,6 +70,7 @@ for a in assets:
     field_name.append(a['Nome'])
     field_lastname.append(a['Cognome'])
     field_email.append(a['email'])
+    field_created.append(a['DataCreazione'])
     field_ragsoc.append(a['RagioneSociale'])
     field_piva.append(a['PartitaIVA'])
     field_address.append(a['Address'])
@@ -102,7 +104,7 @@ for a in assets:
 print('*\n*\n*')
 
 # headers
-csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda', 'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'Ambito', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette', 'Attrazioni', 'Itinerari', 'ItinerariBike'])
+csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda', 'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'Ambito', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette', 'Attrazioni', 'Itinerari', 'ItinerariBike'])
 
 # writing records
 for i in range(0, len(assets)):
@@ -112,6 +114,7 @@ for i in range(0, len(assets)):
     row.append(field_name[i])
     row.append(field_lastname[i])
     row.append(field_email[i])
+    row.append(field_created[i])
     row.append(field_site[i])
     row.append(field_twitter[i])
     row.append(field_facebook[i])
