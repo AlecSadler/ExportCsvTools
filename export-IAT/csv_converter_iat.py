@@ -57,6 +57,7 @@ field_facebook = []
 field_youtube = []
 field_insta = []
 field_expire = []
+field_created = []
 
 
 for a in assets:
@@ -88,12 +89,13 @@ for a in assets:
     field_youtube.append(a['YouTube'])
     field_insta.append(a['Instagram'])
     field_expire.append(a['Scadenza'])
+    field_created.append(a['DataCreazione'])
 
 
 print('*\n*\n*')
 
 # headers
-csv_creator.writerow(['RagioneSociale', 'NomeAzienda', 'NomeSuScheda', 'Coordinate', 'Orari', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'Slug', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'Ambito', 'Regionale', 'Cellulare', 'Telefono', 'Email', 'Referente', 'Tipologia', 'TipoIAT', 'Delegante', 'TelefonoAttivita', 'P.Iva', 'CodiceStruttura', 'Scadenza'])
+csv_creator.writerow(['RagioneSociale', 'NomeAzienda', 'NomeSuScheda', 'Coordinate', 'Orari', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'Slug', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'Ambito', 'Regionale', 'Cellulare', 'Telefono', 'Email', 'Referente', 'Tipologia', 'TipoIAT', 'Delegante', 'TelefonoAttivita', 'P.Iva', 'CodiceStruttura', 'Scadenza', 'DataCreazione'])
 
 # writing records
 for i in range(0, len(assets)):
@@ -127,6 +129,7 @@ for i in range(0, len(assets)):
     row.append(field_piva[i])
     row.append(field_codstrut[i])
     row.append(field_expire[i])
+    row.append(field_created[i])
 
 
     csv_creator.writerow(row)
