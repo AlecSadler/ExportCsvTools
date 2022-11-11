@@ -40,7 +40,8 @@ field_tipologia = []
 field_cell = []
 field_phone = []
 field_ref = []
-field_ambito = []
+field_ambitodel = []
+field_ambiti = []
 field_slug = []
 field_email = []
 field_prov = []
@@ -76,7 +77,8 @@ for a in assets:
     field_teleatt.append(a['TelefonoAttivita'])
     field_ref.append(a['Referente'])
     field_deleg.append(a['Delegante'])
-    field_ambito.append(a['Ambito'])
+    field_ambitodel.append(a['AmbitoDelega'])
+    field_ambiti.append(a['Ambiti'])
     field_slug.append(a['slug'])
     field_email.append(a['email'])
     field_prov.append(a['Provincia'])
@@ -95,7 +97,7 @@ for a in assets:
 print('*\n*\n*')
 
 # headers
-csv_creator.writerow(['RagioneSociale', 'NomeAzienda', 'NomeSuScheda', 'Coordinate', 'Orari', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'Slug', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'Ambito', 'Regionale', 'Cellulare', 'Telefono', 'Email', 'Referente', 'Tipologia', 'TipoIAT', 'Delegante', 'TelefonoAttivita', 'P.Iva', 'CodiceStruttura', 'Scadenza', 'DataCreazione'])
+csv_creator.writerow(['RagioneSociale', 'NomeAzienda', 'NomeSuScheda', 'Coordinate', 'Orari', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'Slug', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'AmbitoDelega', 'Ambiti', 'Regionale', 'Cellulare', 'Telefono', 'Email', 'Referente', 'Tipologia', 'TipoIAT', 'Delegante', 'TelefonoAttivita', 'P.Iva', 'CodiceStruttura', 'Scadenza', 'DataCreazione'])
 
 # writing records
 for i in range(0, len(assets)):
@@ -116,7 +118,8 @@ for i in range(0, len(assets)):
     row.append(field_localita[i])
     row.append(field_comune[i])
     row.append(field_prov[i])
-    row.append(field_ambito[i])
+    row.append(field_ambitodel[i])
+    row.append(field_ambiti[i])
     row.append(field_regionale[i])
     row.append(field_cell[i])
     row.append(field_phone[i])

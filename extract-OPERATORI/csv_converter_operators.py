@@ -44,7 +44,8 @@ field_tipologia = []
 field_cell = []
 field_phone = []
 field_telatt = []
-field_ambito = []
+field_ambitodel = []
+field_ambiti = []
 field_prov = []
 field_site = []
 field_twitter = []
@@ -81,7 +82,8 @@ for a in assets:
     field_cell.append(a['Cellulare'])
     field_phone.append(a['Telefono'])
     field_telatt.append(a['TelefonoAttivita'])
-    field_ambito.append(a['Ambito'])
+    field_ambitodel.append(a['AmbitoDelega'])
+    field_ambiti.append(a['Ambiti'])    
     field_prov.append(a['Provincia'])
     field_codstrut.append(a['CodiceStruttura'])
     field_site.append(a['SitoWeb'])
@@ -104,7 +106,7 @@ for a in assets:
 print('*\n*\n*')
 
 # headers
-csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda', 'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'Ambito', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette', 'Attrazioni', 'Itinerari', 'ItinerariBike'])
+csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda', 'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'AmbitoDelega', 'Ambiti', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette', 'Attrazioni', 'Itinerari', 'ItinerariBike'])
 
 # writing records
 for i in range(0, len(assets)):
@@ -128,7 +130,8 @@ for i in range(0, len(assets)):
     row.append(field_localita[i])
     row.append(field_comune[i])
     row.append(field_prov[i])
-    row.append(field_ambito[i])
+    row.append(field_ambitodel[i])
+    row.append(field_ambiti[i])    
     row.append(field_cell[i])
     row.append(field_phone[i])
     row.append(field_telatt[i])
