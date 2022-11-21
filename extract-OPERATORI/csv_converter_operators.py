@@ -64,6 +64,7 @@ field_attrazioni = []
 field_itinerari = []
 field_bike = []
 field_created = []
+field_tipostrutt = []
 
 
 for a in assets:
@@ -83,7 +84,7 @@ for a in assets:
     field_phone.append(a['Telefono'])
     field_telatt.append(a['TelefonoAttivita'])
     field_ambitodel.append(a['AmbitoDelega'])
-    field_ambiti.append(a['Ambiti'])    
+    field_ambiti.append(a['Ambiti'])
     field_prov.append(a['Provincia'])
     field_codstrut.append(a['CodiceStruttura'])
     field_site.append(a['SitoWeb'])
@@ -95,6 +96,7 @@ for a in assets:
     field_nomeprof.append(a['NomeProfilo'])
     field_nomeatt.append(a['NomeAttivita'])
     field_expire.append(a['Scadenza'])
+    field_tipostrutt.append(a['TipoStruttura'])
     field_eventi.append(a['Eventi'])
     field_offerte.append(a['Offerte'])
     field_idee.append(a['Idee'])
@@ -106,7 +108,7 @@ for a in assets:
 print('*\n*\n*')
 
 # headers
-csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda', 'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'AmbitoDelega', 'Ambiti', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette', 'Attrazioni', 'Itinerari', 'ItinerariBike'])
+csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda', 'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'AmbitoDelega', 'Ambiti', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'TipoStruttura', 'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette', 'Attrazioni', 'Itinerari', 'ItinerariBike'])
 
 # writing records
 for i in range(0, len(assets)):
@@ -131,7 +133,7 @@ for i in range(0, len(assets)):
     row.append(field_comune[i])
     row.append(field_prov[i])
     row.append(field_ambitodel[i])
-    row.append(field_ambiti[i])    
+    row.append(field_ambiti[i])
     row.append(field_cell[i])
     row.append(field_phone[i])
     row.append(field_telatt[i])
@@ -139,6 +141,7 @@ for i in range(0, len(assets)):
     row.append(field_piva[i])
     row.append(field_cf[i])
     row.append(field_codstrut[i])
+    row.append(field_tipostrutt[i])
     row.append(field_expire[i])
     row.append(field_eventi[i])
     row.append(field_offerte[i])
