@@ -110,7 +110,13 @@ for a in assets:
 print('*\n*\n*')
 
 # headers
-csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda', 'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'AmbitoDelega', 'Ambiti', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia', 'Sottotipo', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'TipoStruttura', 'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette', 'Attrazioni', 'Itinerari', 'ItinerariBike'])
+csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', 'SitoWeb', \
+                      'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda',\
+                          'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia',\
+                              'AmbitoDelega', 'Ambiti', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia',\
+                                  'Sottotipo', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'TipoStruttura', \
+                                      'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette',\
+                                          'Attrazioni', 'Itinerari', 'ItinerariBike'])
 
 # writing records
 for i in range(0, len(assets)):

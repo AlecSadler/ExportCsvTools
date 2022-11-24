@@ -97,7 +97,12 @@ for a in assets:
 print('*\n*\n*')
 
 # headers
-csv_creator.writerow(['RagioneSociale', 'NomeAzienda', 'NomeSuScheda', 'Coordinate', 'Orari', 'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'Slug', 'Indirizzo', 'Localita', 'Comune', 'Provincia', 'AmbitoDelega', 'Ambiti', 'Regionale', 'Cellulare', 'Telefono', 'Email', 'Referente', 'Tipologia', 'TipoIAT', 'Delegante', 'TelefonoAttivita', 'P.Iva', 'CodiceStruttura', 'Scadenza', 'DataCreazione'])
+csv_creator.writerow(['RagioneSociale', 'NomeAzienda', 'NomeSuScheda', 'Coordinate', 'Orari',\
+                      'SitoWeb', 'Twitter', 'Facebook', 'YouTube', 'Instagram', 'Slug',\
+                          'Indirizzo', 'Localita', 'Comune', 'Provincia', 'AmbitoDelega', \
+                              'Ambiti', 'Regionale', 'Cellulare', 'Telefono', 'Email',\
+                                  'Referente', 'Tipologia', 'TipoIAT', 'Delegante', \
+                                      'TelefonoAttivita', 'P.Iva', 'CodiceStruttura', 'Scadenza', 'DataCreazione'])
 
 # writing records
 for i in range(0, len(assets)):
