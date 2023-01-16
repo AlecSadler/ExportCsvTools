@@ -26,7 +26,7 @@ csv_creator = csv.writer(buf_file, delimiter = DELIMITER)
 print(f'Used separator: {DELIMITER}')
 
 # select which part of json to export
-assets = to_convert['data']['Users']
+assets = to_convert['Users']
 
 # fields selection
 field_user = []
