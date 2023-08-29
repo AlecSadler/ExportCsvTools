@@ -53,6 +53,9 @@ field_youtube = []
 field_insta = []
 field_expire = []
 field_created = []
+field_istat = []
+field_piva = []
+field_cf = []
 
 for a in assets:
     field_ragsoc.append(a['RagioneSociale'])
@@ -79,12 +82,16 @@ for a in assets:
     field_insta.append(a['Instagram'])
     field_expire.append(a['Scadenza'])
     field_created.append(a['DataCreazione'])
+    field_cf.append(a['CodiceFiscale'])
+    field_piva.append(a['PartitaIVA'])
+    field_istat.append(a['CodiceStruttura'])
 
 
 print('*\n*\n*')
 
 # headers
 csv_creator.writerow(['RagioneSociale', 'NomeAzienda', 'NomeSuScheda', 'SitoWeb',\
+                      'CodiceStruttura', 'PartitaIVA', 'CodiceFiscale', \
                       'Twitter', 'Facebook', 'YouTube', 'Instagram', 'Slug', 'Indirizzo',\
                           'LocalitaDelega', 'Localita', 'Comune', 'Provincia',\
                               'AmbitoDelega', 'Ambiti', 'Regionale', 'Cellulare', 'Telefono',\
@@ -98,6 +105,9 @@ for i in range(0, len(assets)):
     row.append(field_nomeaz[i])
     row.append(field_nomesch[i])
     row.append(field_site[i])
+    row.append(field_istat[i])
+    row.append(field_piva[i])
+    row.append(field_cf[i])
     row.append(field_twitter[i])
     row.append(field_facebook[i])
     row.append(field_youtube[i])

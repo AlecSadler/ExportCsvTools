@@ -66,6 +66,7 @@ field_bike = []
 field_created = []
 field_tipostrutt = []
 field_third = []
+field_promo = []
 
 
 for a in assets:
@@ -87,7 +88,6 @@ for a in assets:
     field_ambitodel.append(a['AmbitoDelega'])
     field_ambiti.append(a['Ambiti'])
     field_prov.append(a['Provincia'])
-    field_codstrut.append(a['CodiceStruttura'])
     field_site.append(a['SitoWeb'])
     field_twitter.append(a['Twitter'])
     field_facebook.append(a['Facebook'])
@@ -97,7 +97,6 @@ for a in assets:
     field_nomeprof.append(a['NomeProfilo'])
     field_nomeatt.append(a['NomeAttivita'])
     field_expire.append(a['Scadenza'])
-    field_tipostrutt.append(a['TipoStruttura'])
     field_eventi.append(a['Eventi'])
     field_offerte.append(a['Offerte'])
     field_idee.append(a['Idee'])
@@ -106,6 +105,7 @@ for a in assets:
     field_itinerari.append(a['Itinerari'])
     field_bike.append(a['ItinerariBike'])
     field_third.append(a['Sottotipo'])
+    field_promo.append(a['InvioPromo'])
 
 print('*\n*\n*')
 
@@ -114,7 +114,7 @@ csv_creator.writerow(['username', 'Nome', 'Cognome', 'Email', 'DataCreazione', '
                       'Twitter', 'Facebook', 'YouTube', 'Instagram', 'RagioneSociale', 'NomeScheda',\
                           'NomeProfilo', 'NomeAttivita', 'Indirizzo', 'Localita', 'Comune', 'Provincia',\
                               'AmbitoDelega', 'Ambiti', 'Cellulare', 'Telefono', 'TelefonoAttivita', 'Tipologia',\
-                                  'Sottotipo', 'PartitaIva', 'CodiceFiscale', 'CodiceStruttura', 'TipoStruttura', \
+                                  'Sottotipo', 'PartitaIva', 'CodiceFiscale', 'InvioPromo', \
                                       'Scadenza', 'Eventi', 'Offerte', 'Idee', 'Ricette',\
                                           'Attrazioni', 'Itinerari', 'ItinerariBike'])
 
@@ -149,8 +149,7 @@ for i in range(0, len(assets)):
     row.append(field_third[i])
     row.append(field_piva[i])
     row.append(field_cf[i])
-    row.append(field_codstrut[i])
-    row.append(field_tipostrutt[i])
+    row.append(field_promo[i])
     row.append(field_expire[i])
     row.append(field_eventi[i])
     row.append(field_offerte[i])
